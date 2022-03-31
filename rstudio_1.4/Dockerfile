@@ -88,11 +88,11 @@ RUN ln -s /usr/local/bin/rstudio-cml /usr/local/bin/ml-runtime-editor
 # The final requirement is to set various labels and environment variables that CML needs 
 # to pick up the Runtime's details. Here the editor is to RStudio
 ENV ML_RUNTIME_EDITOR="RStudio" \ 
-ML_RUNTIME_EDITION="RStudio Community Runtime"	\ 
+ML_RUNTIME_EDITION="RStudio wp2"	\ 
 ML_RUNTIME_SHORT_VERSION="2021.09" \
 ML_RUNTIME_MAINTENANCE_VERSION="3" \
 ML_RUNTIME_FULL_VERSION="2021.09.3" \
-ML_RUNTIME_DESCRIPTION="Testing RStudio" \
+ML_RUNTIME_DESCRIPTION="RStudio + ubuntu  packages" \
 ML_RUNTIME_KERNEL="R 4.0"
 
 LABEL com.cloudera.ml.runtime.editor=$ML_RUNTIME_EDITOR \
