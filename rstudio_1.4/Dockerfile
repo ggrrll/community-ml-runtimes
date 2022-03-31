@@ -76,6 +76,9 @@ COPY rserver.conf /etc/rstudio/rserver.conf
 COPY rstudio-cml /usr/local/bin/rstudio-cml
 RUN chmod +x /usr/local/bin/rstudio-cml
 
+# install ubuntu packages for WP2
+RUN apt-get update && apt-get install -y --no-install-recommends unixodbc-dev cmake zlib1g-dev libxml2-dev libcurl4-openssl-dev && apt-get clean && rm -rf /var/lib/apt/lists/*
+
 # Create a Symlink to the default editor launcher 
 # This is the main requirement to get CML to launch a different editor. Create a symlink
 # from the editors launcher to /usr/local/bin/ml-runtime-editor
